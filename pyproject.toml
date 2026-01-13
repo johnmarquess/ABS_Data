@@ -1,0 +1,25 @@
+[project]
+name = "abs-data"
+version = "0.1.0"
+description = "ABS Census Data extraction and exploration tool using the ABS Data API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.0",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "pandas>=2.2.0",
+    "pyarrow>=18.0.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
